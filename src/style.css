@@ -1,0 +1,29 @@
+.container {
+  display: flex;
+  flex-direction: row;
+ 
+}
+.left {
+  color: rgb(238, 184, 34);
+  padding: auto;
+  margin-right: 40px;
+}
+.right {
+  color: rgb(238, 184, 34);
+  padding: auto;
+  margin-left: 60px;
+}
+.detail {
+  text-align: left;
+  color: rgb(32, 178, 39);
+  position: absolute;
+  left: 90px;
+  top:30px;
+  border: solid green;
+  align-content: flex-start;
+  /* padding: 5px; */
+}
+.det {
+  color: brown;
+  border: solid red;
+}
