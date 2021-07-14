@@ -28,12 +28,16 @@ class UserList extends React.Component {
             {this.props.ind === i && (
               <div>
                 <div
-                  onClick={() =>
+                  onMouseEnter={() =>
+                    this.setState({ viewFull: !this.state.viewFull })
+                  }
+                  onMouseLeave={() =>
                     this.setState({ viewFull: !this.state.viewFull })
                   }
                 >
                   {this.props.user[i].name}
                 </div>
+                <div />
                 {this.state.viewFull && (
                   <div>
                     <div>Username:{this.props.user[i].username}</div>
@@ -77,10 +81,7 @@ class Game extends React.Component {
             >
               LEFT
             </button>
-            <div>
-              {' '}
-              <Show i={this.state.index} />
-            </div>
+
             <button
               className="right"
               onClick={() => {
@@ -93,6 +94,7 @@ class Game extends React.Component {
             <div />
           </div>
           <div className="pass">
+            <Show i={this.state.index} />
             <UserList user={this.state.userArr} ind={this.state.index} />
           </div>
         </div>
